@@ -43,11 +43,23 @@ h1{
 
     text-align: right;
     margin: 0 30px 10px;
+    
+   
 }
 .icon{
     width: 25px;
     height: 15px;
+  
 }
+/* .show{
+    display: block;
+margin-left: 100%;
+}
+.hide{
+    display: none;
+    margin-left:100% ;
+   
+} */
 .input_box{
     
     max-width: 100%;
@@ -72,7 +84,7 @@ border:1.5px solid #C4C4C4;
 .submit_btn{
   
     margin: 15px 0 ;
-  
+
 }
 
 .add-btn{
@@ -80,10 +92,13 @@ border:1.5px solid #C4C4C4;
     padding: 12px 32px 12px 58px;
     border-radius: 71px;
     font-size: 14px;
-   position: relative;
+    position: relative;
    font-family: "Roboto", sans-serif;
 color: white;
 border: none;
+}
+.hidden{
+    display: none;
 }
 .add-btn::before{
   
@@ -101,4 +116,39 @@ border: none;
    color: white;
     background-color:#9953F1;
 
+}
+
+
+
+.delete-btn{
+ 
+    border-radius: 71px;
+    
+}
+.delete-btn:hover{
+    background-color: #833AE0;
+    color: white;
+
+}
+.note-part{
+
+    display: flex;
+
+ border-radius: 10px;
+   justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+   
+    max-width: 100%;
+}
+.note-field{
+    max-width: 88%;
+    border-radius: 10px;
+    margin: 0 auto;
+    border: 0.5px solid;
+   border-color: #C4C4C4;
+   display: none;
+}
+.change{
+    margin-left: 250px;
 }
