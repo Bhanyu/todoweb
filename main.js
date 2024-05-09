@@ -1,83 +1,11 @@
-// let text = document.querySelector("input")
-// let btn = document.querySelector(".plus");
-// let button = document.querySelector(".add-btn")
-// let noteContainer = document.querySelector(".note-field")
-// let reset = document.querySelector(".clean")
-// let sort = document.querySelector(".icon_part")
-// let notes = []
 
-
-
-// button.addEventListener("click", () => {
-//     let value1 = text.value 
-//     if (value1!== "") {
-//         notes.push(text.value);
-//         addNote(notes)
-//         text.value = "";
-//     } else {
-//         alert("elave edin")
-//     }
-
-// });
-// function addNote(arr) {
-//     noteContainer.innerHTML = "";
-//     arr.forEach((element) => {
-//         let noteDiv = document.createElement("div");
-//         noteDiv.classList.add("note-part");
-//         let note = document.createElement("p");
-//         note.textContent = element;
-//         let removeBtn = document.createElement("span")
-       
-//         let image = document.createElement("img");
-//         image.src = "./images/Group 77.png"
-//         image.classList = "delete-btn"
-//          removeBtn.append(image)
-      
-//         noteDiv.append(note, removeBtn);
-//         noteContainer.append(noteDiv)
-//         removeBtn.addEventListener("click", () => {
-//             notes = notes.filter((value) => element !== value);
-//             addNote(notes);
-//         });
-//     });
-// }
-
-
-
-// reset.addEventListener("click", () => {
-//     text.value = "";
-// });
-
-// let sorted = false;
-// sort.addEventListener("click", () => {
-//     if (sorted === false) {
-//         notes.sort((a, b) => {
-//             return a.localeCompare(b);
-
-//         })
-//         sorted = true;
-//         sort.firstElementChild.classList.add(".hide")
-//         sort.firstElementChild.classList.remove(".show")
-//         console.log(sorted)
-//     }else if(sorted === true){
-//         notes.sort((a, b) => {
-//             return b.localeCompare(a); 
-//         })
-//         sorted = false;
-//         sort.firstElementChild.classList.add(".show")
-//         sort.firstElementChild.classList.remove(".hide")
-//         console.log(sorted)
-
-//     }
-//     addNote(notes);
-//     console.log(sorted)
-// }); 
 
 let text = document.querySelector("input")
 let btn = document.querySelector(".plus");
 let button = document.querySelector(".add-btn")
 let noteContainer = document.querySelector(".note-field")
 let reset = document.querySelector(".clean")
+let cleanBtn = document.querySelector(".clean_button") 
 let sort = document.querySelector(".icon_part")
 let hidden = document.querySelector(".hidden");
 let icon = document.querySelector(".icon");
@@ -109,8 +37,14 @@ button.addEventListener("click", () => {
     } else {
         alert("elave edin")
     }
+    text.style.border = "none"
+    reset.style.display = "none"
 
 });
+text.addEventListener("focus", ()=>{
+    text.style.border="2px solid #C4C4C4";
+    reset.style.display = "block"
+})
 function addNote(arr) {
     noteContainer.innerHTML = "";
     arr.forEach((element) => {

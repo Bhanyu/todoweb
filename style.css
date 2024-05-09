@@ -78,8 +78,14 @@ border:1.5px solid #C4C4C4;
 }
 .clean_button{
     position: absolute;
-    top: 25%;
+    top: 20%;
     right: 9%;
+ 
+}
+
+.clean img{
+ 
+    display: block;
 }
 .submit_btn{
   
