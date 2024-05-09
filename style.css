@@ -90,7 +90,7 @@ border:1.5px solid #C4C4C4;
 .submit_btn{
   
     margin: 15px 0 ;
-
+    position: relative;
 }
 
 .add-btn{
@@ -98,7 +98,7 @@ border:1.5px solid #C4C4C4;
     padding: 12px 32px 12px 58px;
     border-radius: 71px;
     font-size: 14px;
-    position: relative;
+    
    font-family: "Roboto", sans-serif;
 color: white;
 border: none;
@@ -106,7 +106,7 @@ border: none;
 .hidden{
     display: none;
 }
-.add-btn::before{
+/* .add-btn::before{
   
      
     content: "+";
@@ -122,6 +122,22 @@ border: none;
    color: white;
     background-color:#9953F1;
 
+} */
+.plus{
+    position: absolute ;
+    top: 0;
+    left: 27%;
+    width: 42px;
+    height: 41px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 71px;
+   color: white;
+    background-color:#9953F1;
+}
+.plus i{
+    font-size: 12px;
 }
 
 

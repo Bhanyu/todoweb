@@ -9,6 +9,7 @@ let cleanBtn = document.querySelector(".clean_button")
 let sort = document.querySelector(".icon_part")
 let hidden = document.querySelector(".hidden");
 let icon = document.querySelector(".icon");
+let plus = document.querySelector(".plus")
 let notes = []
 
 
@@ -41,10 +42,14 @@ button.addEventListener("click", () => {
     reset.style.display = "none"
 
 });
-text.addEventListener("focus", ()=>{
-    text.style.border="2px solid #C4C4C4";
+plus.addEventListener("click", ()=>{
+    text.style.border = "2px solid #C4C4C4";
     reset.style.display = "block"
 })
+// text.addEventListener("focus", ()=>{
+//     text.style.border="2px solid #C4C4C4";
+   
+// })
 function addNote(arr) {
     noteContainer.innerHTML = "";
     arr.forEach((element) => {
@@ -71,9 +76,14 @@ function addNote(arr) {
         noteDiv.append(note, removeBtn);
         noteContainer.append(noteDiv)
         removeBtn.addEventListener("click", () => {
-            notes = notes.filter((value) => element !== value);
-            addNote(notes);
            
+            notes = notes.filter((value) => element !== value);
+         
+            addNote(notes);
+            if (noteContainer.innerHTML === "") {
+                noteContainer.style.display = "none"
+            }
+          
         });
     });
 }
