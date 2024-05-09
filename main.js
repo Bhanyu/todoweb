@@ -10,8 +10,15 @@ let sort = document.querySelector(".icon_part")
 let hidden = document.querySelector(".hidden");
 let icon = document.querySelector(".icon");
 let plus = document.querySelector(".plus")
+let cleanimg = document.querySelector(".cleanimg")
 let notes = []
-
+reset.addEventListener("mouseover",()=>{
+    cleanimg.src = "./images/Group 70.svg"
+  }) 
+  reset.addEventListener("mouseleave",()=>{
+    cleanimg.src = "./images/Group 56.svg"
+    
+  }) 
 
 icon.addEventListener("mouseover", ()=>{
     icon.src = "./images/Group 73.svg"
@@ -38,18 +45,18 @@ button.addEventListener("click", () => {
     } else {
         alert("elave edin")
     }
-    text.style.border = "none"
+    text.style.display = "none"
     reset.style.display = "none"
 
 });
 plus.addEventListener("click", ()=>{
-    text.style.border = "2px solid #C4C4C4";
+    text.style.display = "block";
     reset.style.display = "block"
 })
-// text.addEventListener("focus", ()=>{
-//     text.style.border="2px solid #C4C4C4";
+text.addEventListener("focus", ()=>{
+    text.style.border="2px solid #C4C4C4";
    
-// })
+})
 function addNote(arr) {
     noteContainer.innerHTML = "";
     arr.forEach((element) => {
