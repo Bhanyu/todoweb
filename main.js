@@ -12,6 +12,9 @@ let icon = document.querySelector(".icon");
 let plus = document.querySelector(".plus")
 let cleanimg = document.querySelector(".cleanimg")
 let notes = []
+
+
+
 reset.addEventListener("mouseover",()=>{
     cleanimg.src = "./images/Group 70.svg"
   }) 

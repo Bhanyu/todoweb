@@ -103,39 +103,36 @@ border:1.5px solid #C4C4C4;
 color: white;
 border: none;
 }
+.add-btn:hover{
+    background-color: #9953F1;
+ 
+}
+
 .hidden{
     display: none;
 }
-/* .add-btn::before{
-  
-     
-    content: "+";
-    position: absolute ;
-    top: 0;
-    left: 0;
-    width: 42px;
-    height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-radius: 71px;
-   color: white;
-    background-color:#9953F1;
 
-} */
 .plus{
     position: absolute ;
     top: 0;
     left: 27%;
     width: 42px;
-    height: 41px;
+    height: 40px;
    display: flex;
    justify-content: center;
    align-items: center;
    border-radius: 71px;
    color: white;
     background-color:#9953F1;
+    
 }
+
+.plus:hover{
+   
+    background-color:#AA68FE;
+    
+}
+
 .plus i{
     font-size: 12px;
 }
